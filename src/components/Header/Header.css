@@ -1,0 +1,75 @@
+.HeaderContainer {
+  height: 75px;
+  -webkit-box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.75);
+  position: sticky;
+  background-color: #db222a;
+  color: white;
+  font: Oxygen;
+  top: 0px;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-family: "Titillium Web", sans-serif;
+  padding: 0 50px;
+}
+
+.HeaderLogoContainer {
+  line-height: 75px;
+  font-size: 32px;
+}
+
+.HeaderMenuContainer {
+}
+
+.HeaderBtn {
+  background: #facfad;
+  color: #17255a;
+  float: right;
+  border: none;
+  margin: 15px 0;
+  padding: 7.5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.HeaderBtn:hover {
+  background: #17255a;
+  color: #facfad;
+  border: none;
+}
+
+.HDropdown {
+  position: relative;
+}
+
+.HDcontent {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.HDcontent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.HDcontent a:hover {
+  background-color: #f1f1f1;
+}
+
+.HDropdown:hover .HDcontent {
+  display: block;
+}
+
+.HDropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

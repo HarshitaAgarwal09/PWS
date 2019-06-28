@@ -1,0 +1,54 @@
+.SidebarContainer {
+  padding: 15px 40px;
+  width: 30%;
+  background: white;
+  float: left;
+}
+@media only screen and (max-width: 768px) {
+  .SidebarContainer {
+    width: 100%;
+  }
+}
+
+.SidebarFilter {
+}
+.SidebarFilter .Slider {
+}
+.SidebarTitle {
+  font-size: 18px;
+  padding: 0 30px 0 0;
+}
+
+.Ratings {
+  padding: 10px 0;
+}
+.Ammenities {
+  padding: 10px 0;
+}
+.Distance,
+.Map,
+.Place {
+  padding: 10px 0;
+}
+.DistanceBtn {
+  background: lightblue;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Place input {
+  margin: 5px 0;
+  width: 100%;
+  border: 2px solid lightblue;
+  border-radius: 5px;
+}
+.FilterBtn {
+  background: wheat;
+  border: none;
+  padding: 5px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: black;
+  font-size: 18px;
+}
