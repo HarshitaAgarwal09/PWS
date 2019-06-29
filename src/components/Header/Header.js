@@ -14,6 +14,10 @@ function Header(props) {
         Logo
       </div>
       <div className="HeaderMenuContainer">
+        <ul>
+          <li>Notifications</li>
+          <li>Orders</li>
+        </ul>
         {is_login ? (
           <button className="HeaderBtn" onClick={ToggleLogin}>
             Login

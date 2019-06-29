@@ -1,12 +1,44 @@
 .SidebarContainer {
   padding: 15px 40px;
-  width: 30%;
+  width: 300px;
   background: white;
-  float: left;
+  height: 100%;
+  margin-top: 75px;
+  position: fixed;
 }
+.dis-none {
+  display: none;
+}
+.dis-block {
+  display: block;
+}
+.ToggleBtn {
+  display: none;
+  top: 75px;
+  background: white;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  border-radius: 0 50px 50px 0;
+  padding: 10px;
+  position: absolute;
+  z-index: 0;
+}
+.ToogleBtnIcon {
+  float: left;
+  margin-right: 20px;
+}
+.ToggleBtn p {
+  font-size: 18px;
+}
+
 @media only screen and (max-width: 768px) {
   .SidebarContainer {
     width: 100%;
+    display: none;
+  }
+  .ToggleBtn {
+    display: block;
   }
 }
 
