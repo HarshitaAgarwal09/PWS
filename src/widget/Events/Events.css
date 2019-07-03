@@ -1,50 +1,11 @@
 .Events {
-  border: 2px solid red;
-  margin-left: 300px;
-  float: right;
-}
-
-.background-img {
-  width: 100%;
-}
-@media only screen and (max-width: 768px) {
-  .Events {
-    width: 100%;
-  }
-}
-.Image-container {
-  z-index: -1;
-  position: relative;
-}
-.SearchBar {
-  text-align: center;
-  position: absolute;
-  bottom: 10%;
-  width: 100%;
-}
-.SearchBar input {
-  padding: 10px;
-  border: none;
-  margin: 10px;
-  text-align: center;
-  border-radius: 5px;
-}
-
-.SearchBar button {
-  background: red;
-  padding: 10px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin: 10px;
-  cursor: pointer;
 }
 
 .EventItem {
   border: 2px solid black;
   display: grid;
   grid-template-columns: 32.5% 67.5%;
-  margin: 10px;
+  margin: 10px 0;
 }
 
 .EventItem img {
@@ -52,7 +13,6 @@
 }
 
 .EIText {
-  border: 2px solid red;
   padding: 10px;
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -82,3 +42,68 @@
   grid-template-rows: 50% 50%;
   text-align: center;
 }
+.event-details-container {
+  margin: 0 50px;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+}
+.event-details {
+  grid-column: col-start / span 12;
+}
+.permanent-note {
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.event-days {
+  border: 2px solid red;
+  padding: 100px;
+  grid-column: col-start / span 8;
+  margin: 0 0 10px 0;
+}
+.recent-events {
+  border: 2px solid black;
+  grid-column: col-start 9 / span 4;
+  margin: 0 10px;
+  grid-row: 3;
+}
+.quantity-btn {
+  grid-column: col-start 7 / span 2;
+  text-align: center;
+}
+.quantity-btn button {
+  background: red;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+/* 
+.EventDetails {
+  margin: 10px 50px;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 20px;
+}
+
+.EventDetails .EI {
+  height: 200px;
+  border: 2px solid white;
+}
+
+.EventDetails .EI img {
+  height: 100%;
+  border-radius: 20px;
+  grid-column: col-start / span 3;
+}
+
+.EventDetails .EIT {
+  font-size: 16px;
+  grid-column: col-start 4 / -1;
+}
+
+.EventDetails .EIc1 {
+} */

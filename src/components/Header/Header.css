@@ -1,3 +1,29 @@
+.header {
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-column-gap: 3rem;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background-color: #db222a;
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.header-menu {
+  background-color: #db222a;
+  color: white;
+}
+
+.header-login-btn {
+  background: #facfad;
+  color: #17255a;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
 .HeaderContainer {
   -webkit-box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 9px -1px rgba(0, 0, 0, 0.75);

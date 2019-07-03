@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Events.css";
 import { Rate } from "antd";
+import { Link } from "react-router-dom";
 
 const EventItem = props => {
   return (
@@ -32,7 +33,12 @@ const EventItem = props => {
           </div>
         </div>
         <div className="EIcol3">
-          <button className="EIBtn">View Details</button>
+          {props.is_view_details ? (
+            <Link to={/event/ + props.event.eventid}>
+              <button className="EIBtn">View Details</button>
+            </Link>
+          ) : null}
+
           <div className="EIRatings">
             {" "}
             (Ratings)
@@ -52,6 +58,7 @@ const EventItem = props => {
 const EventList = props => {
   const [events, setEvents] = useState([
     {
+      eventid: 1,
       name: "Event1",
       location: "Delhi",
       description: "Comedy",
@@ -61,6 +68,7 @@ const EventList = props => {
         "https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/2017/12/22223742/Events-1200x630.jpg"
     },
     {
+      eventid: 2,
       name: "Event1",
       location: "Delhi",
       description: "Comedy",
@@ -70,6 +78,7 @@ const EventList = props => {
         "https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/2017/12/22223742/Events-1200x630.jpg"
     },
     {
+      eventid: 3,
       name: "Event1",
       location: "Delhi",
       description: "Comedy",
@@ -79,6 +88,7 @@ const EventList = props => {
         "https://d3vhc53cl8e8km.cloudfront.net/hello-staging/wp-content/uploads/2017/12/22223742/Events-1200x630.jpg"
     },
     {
+      eventid: 4,
       name: "Event1",
       location: "Delhi",
       description: "Comedy",
@@ -89,25 +99,8 @@ const EventList = props => {
     }
   ]);
   let EventsDisplay = events.map(event => {
-    return <EventItem event={event} />;
+    return <EventItem event={event} is_view_details={true} />;
   });
-  return (
-    <div className="Events">
-      <div className="Image-container">
-        <img
-          className="background-img"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvV7a5eIyQqlcN1zu16Xr7yMFmRsEraexnjHQKq2LceXgZwyYXbw"
-        />
-        <div className="SearchBar">
-          <input type="text" name="location" placeholder="Location" />
-          <input type="text" name="event_type" placeholder="Event Type" />
-          <input type="date" name="date" placeholder="Date" />
-          <button>Search</button>
-        </div>
-      </div>
-
-      {EventsDisplay}
-    </div>
-  );
+  return <div className="Events">{EventsDisplay}</div>;
 };
-export default EventList;
+export { EventList, EventItem };
