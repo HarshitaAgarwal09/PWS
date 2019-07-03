@@ -2,10 +2,11 @@
 }
 
 .EventItem {
-  border: 2px solid black;
+  background: white;
   display: grid;
   grid-template-columns: 32.5% 67.5%;
   margin: 10px 0;
+  border-radius: 5px;
 }
 
 .EventItem img {
@@ -56,10 +57,45 @@
   border-radius: 10px;
 }
 .event-days {
-  border: 2px solid red;
-  padding: 100px;
   grid-column: col-start / span 8;
   margin: 0 0 10px 0;
+  display: grid;
+  grid-template-columns: 25% 75%;
+  text-align: center;
+  background: white;
+}
+.time-slots {
+  display: grid;
+  grid-template-rows: 16.66% 16.66% 16.66% 16.66% 16.66% 16.66%;
+}
+.time-slot-item {
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 10% 15% 25% 40% 10%;
+  font-size: 18px;
+}
+.timings {
+}
+
+.price {
+}
+.seat {
+}
+.success {
+  color: green;
+  font-weight: bold;
+}
+.checkbox input {
+  padding: 100px;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.event-morning {
+}
+.event-days img {
+  width: 100%;
 }
 .recent-events {
   border: 2px solid black;
@@ -81,6 +117,25 @@
   padding: 0 10px;
   cursor: pointer;
 }
+.selected-events {
+  grid-column: col-start 1 / span 12;
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  border-radius: 15px;
+  padding: 10px;
+  background: lightseagreen;
+  color: white;
+}
+.book-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background: red;
+  text-align: center;
+  color: white;
+  grid-column: col-start 5 / span 3;
+}
+
 /* 
 .EventDetails {
   margin: 10px 50px;

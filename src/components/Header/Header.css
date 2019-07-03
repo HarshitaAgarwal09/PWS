@@ -10,6 +10,10 @@
   top: 0;
 }
 
+.ant-menu-item-active: hover {
+  background: black;
+}
+
 .header-menu {
   background-color: #db222a;
   color: white;

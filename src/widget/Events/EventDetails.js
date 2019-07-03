@@ -1,8 +1,39 @@
 import React, { useState } from "react";
 import { EventItem } from "./EventList";
-import { Rate } from "antd";
+import { Rate, Select } from "antd";
 import { Link } from "react-router-dom";
 import "./Events.css";
+import { Icon } from "antd";
+
+const SelectedList = props => {
+  const [selected_list, setSelectedList] = useState([]);
+  return (
+    <div className="selected-events">
+      {" "}
+      <div className="time-slots">
+        <div className="time-slot-item">
+          <div className="timings">4-5 </div>
+          <div className="price">600</div>
+          <div className="seat">60/100</div>
+          <div className="success">
+            {" "}
+            <Icon type="check-circle" />
+            Successful
+          </div>
+          <div className="checkbox">
+            <input type="checkbox" />
+          </div>
+        </div>
+        <div>Time SLot</div>
+        <div>Time SLot</div>
+        <div>Time SLot</div>
+        <div>Time SLot</div>
+        <div>Time SLot</div>
+      </div>
+      <p>SelectedList Events</p>
+    </div>
+  );
+};
 
 const RecentEvents = () => {
   return (
@@ -50,24 +81,58 @@ export default function EventDetails(props) {
       <div className="event-days">
         <div className="event-morning">
           <p>Morning</p>
+          <img src=" https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-06-512.png" />
+        </div>
+        <div className="time-slots">
+          <div className="time-slot-item">
+            <div className="timings">4-5 </div>
+            <div className="price">600</div>
+            <div className="seat">60/100</div>
+            <div className="success">
+              {" "}
+              <Icon type="check-circle" />
+              Successful
+            </div>
+            <div className="checkbox">
+              <input type="checkbox" />
+            </div>
+          </div>
+          <div>Time SLot</div>
+          <div>Time SLot</div>
+          <div>Time SLot</div>
+          <div>Time SLot</div>
+          <div>Time SLot</div>
         </div>
       </div>
       <div className="event-days">
         <div className="event-afternoon">
           <p>Afternoon</p>
+          <img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-07-512.png" />
+        </div>
+        <div className="time-slots">
+          <div>Time SLot</div>
+          <div>Time SLot</div>
+          <div>Time SLot</div>
+          <div>Time SLot</div>
+          <div>Time SLot</div>
+          <div>Time SLot</div>
         </div>
       </div>
       <div className="event-days">
         <div className="event-evening">
           <p>Evening</p>
+          <img src="https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-11-512.png" />
         </div>
       </div>
       <div className="event-days">
         <div className="event-night">
           <p>Night</p>
+          <img src=" https://cdn2.iconfinder.com/data/icons/weather-color-2/500/weather-10-512.png" />
         </div>
       </div>
       <RecentEvents />
+      <SelectedList />
+      <button className="book-btn">Book Tickets and Pay</button>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function LatestOrder() {
+export default function LatestOrder(props) {
   return (
-    <div>
-      <p>Latest Order</p>
+    <div className="latest-order">
+      {props.is_latest_order ? <p>Latest Order</p> : <p>No Latest Order</p>}
     </div>
   );
 }
